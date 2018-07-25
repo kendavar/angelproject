@@ -14,9 +14,19 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
+<<<<<<< HEAD
 from django.conf.urls import path,url,include
 
 urlpatterns = [
     url('admin/', admin.site.urls),
     url(r'^angelapp/$',include("angelapp.urls"))
 ]
+=======
+from django.urls import url,include
+
+urlpatterns = [
+    url(r'^$',views.index,name='index'),
+    url('admin/', admin.site.urls),
+    url(r'angelapp/',include('AppTwo.urls'))
+]
+>>>>>>> da9c7dcfe043aa48db7a1b6c558ebe240e01e471
