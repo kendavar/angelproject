@@ -1,0 +1,36 @@
+{% extends "angelapp/base.html"%}
+{% load staticfiles %}
+{% block body_block %}
+
+
+<h1 align="middle"> Details of {{ details.firstname }} </h1>
+{% if details.profilePic %}
+<img  class="center" href="{{ details.profilePic }}" alt="" width="200" height="250">
+{% endif %}
+<table class="table table-bordered">
+  <tbody>
+    <tr>
+      <th scope="row">Name: </th>
+      <td>{{ details.firstname }} {{ details.lastName }}</td>
+    </tr>
+    <tr>
+      <th scope="row">User Name: </th>
+      <td>{{ details.username}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Gender: </th>
+      <td>{{ details.gender }}</td>
+    </tr>
+    <tr>
+      <th scope="row">Email: </th>
+      <td>{{ details.email }}</td>
+    </tr>
+    <tr>
+      <th scope="row">Description: </th>
+      <td>{{ details.description }}</td>
+    </tr>
+    
+  </tbody>
+</table>
+
+{% endblock %}

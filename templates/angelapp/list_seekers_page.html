@@ -1,0 +1,33 @@
+{% extends "angelapp/base.html"%}
+{% load staticfiles %}
+{% block body_block %}
+   <div class="container" >
+  <div class="row">
+  <div class="col-xs-6 col-md-2" >
+    <div class="navy">
+      <div class="content" background-color= "lightblue">
+
+      </div>
+    </div>
+  </div>
+  <div class="col-xs-12 col-md-10" background-color="#FFFFFF;">
+    <div class="light">
+      <div class="content">
+        <p></p>
+        <h1 id="quotetitle" align="center">List of Seekers</h1>
+        <p></p>
+        <p></p>
+        {% for field in angeltable_list %}
+        <div class="list-group">
+            <a href="{{ field.id }}" class="list-group-item list-group-item-action">
+              <p>{{ field.firstname}} {{field.lastName}}</p>
+            </a>
+        </div>
+        {% endfor %}
+        
+    </div>
+  </div>
+</div>
+
+</div>
+{% endblock %}
