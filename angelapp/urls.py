@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from django.urls import path
 from django.views.generic.base import TemplateView
 from . import views
@@ -14,13 +13,4 @@ urlpatterns = [
     #for sending the notification
     path(r'send/(?P<value>\s+)/$', views.send_notifications, name='send')
 ]
-=======
-from django.conf.urls import url
-from . import views
 
-app_name = "angelapp"
-
-urlpatterns = [
-    url(r'^$',views.HomePage.as_view(),name='homepage')
-]
->>>>>>> e671e54a0bbc2726c7dec09c91f37eea12271ccb

@@ -1,5 +1,4 @@
 from django.shortcuts import render
-<<<<<<< HEAD
 from django.views.generic import View, TemplateView, ListView, DetailView
 import pyrebase 
 
@@ -79,13 +78,3 @@ def send_notifications(request, reg_id):
     result = FCMNotification(api_key=server_key).notify_single_device(
         registration_id=reg_id, message_title=message_title, message_body=message_body)
     return HttpResponse(result)
-=======
-from django.views.generic import View,TemplateView
-# Create your views here.
-
-class HomePage(TemplateView):
-    template_name = "homepage.html"
-
-
-
->>>>>>> e671e54a0bbc2726c7dec09c91f37eea12271ccb
