@@ -39,8 +39,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+<<<<<<< HEAD
     'angelapp',
     'widget_tweaks'
+=======
+    'freespirit'
+>>>>>>> e671e54a0bbc2726c7dec09c91f37eea12271ccb
 ]
 
 MIDDLEWARE = [
@@ -54,6 +58,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'angelproject.urls'
+
+LOGIN_REDIRECT_URL = '/'
 
 TEMPLATES = [
     {
@@ -113,6 +119,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+AUTH_USER_MODEL = 'freespirit.CustomUser'
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.0/topics/i18n/

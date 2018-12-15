@@ -1,4 +1,8 @@
 {
+<<<<<<< HEAD
     "python.linting.pylintEnabled": true,
     "python.pythonPath": "/home/kentheangel/anaconda3/envs/MyDjangoEnv/bin/python"
+=======
+    "python.pythonPath": "/home/ANT.AMAZON.COM/kendavar/anaconda3/envs/Djangoprojects/bin/python"
+>>>>>>> e671e54a0bbc2726c7dec09c91f37eea12271ccb
 }
