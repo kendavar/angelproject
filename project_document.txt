@@ -2,3 +2,29 @@ ssh -i angelkey.pem ubuntu@ec2-18-209-160-196.compute-1.amazonaws.com
 
 #Create a requriment file
 pip freeze > requirements.txt
+
+#create a instance
+
+#Create a virutal environment
+sudo apt-get install python3-pip
+sudo pip3 install virtualenv 
+virtualenv venv 
+virtualenv -p /usr/bin/python2.7 venv
+source venv/bin/activate
+deactivate
+
+Alias /static /home/ubuntu/kendavar/angelproject/static
+
+    <Directory /home/ubuntu/kendavar/angelproject/angelproject>
+        <Files wsgi.py>
+            Require all granted
+        </Files>
+    </Directory>
+
+    WSGIDaemonProcess angelproject python-path=/home/ubuntu/kendavar/angelproject/venv/lib/python3.5/site-packages
+
+    WSGIProcessGroup project_name
+    WSGIScriptAlias / /home/ubuntu/kendavar/angelproject/angelproject/
+
+#create database and table
+

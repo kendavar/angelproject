@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 {% load widget_tweaks %}
 {% load staticfiles %}
+{% comment %} {% if user.is_authenticated %} {% endcomment %}
 <html>
   <head>
     <meta charset="utf-8">
@@ -19,6 +20,10 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
+     <a class="nav-item nav-link active" href="{% url 'angelapp:home'%}">Users <span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" href="{% url 'angelapp:quote' %}">Quotes</a>
+      <a class="nav-item nav-link" href="{% url 'angelapp:create_quote'%}">Create Quote</a>
+      <a class="nav-item nav-link" href="#">Update</a>
     </ul>
   </div>
 </nav>
@@ -47,3 +52,7 @@
 </footer>
   </body>
 </html>
+{% comment %} {% else %}
+  <p>You are not logged in</p>
+  <a href="{% url 'login' %}">login</a>
+{% endif %} {% endcomment %}

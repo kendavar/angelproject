@@ -32,5 +32,9 @@
     
   </tbody>
 </table>
-
+{%  if details.flag  %}
+    <button type="button" class="btn btn-primary" disabled>Chat Enabled</button>
+{%  else  %}
+    <a href="send/{{details.deviceToken}}/{{details.firebase_id}}/"/><button type="button" class="btn btn-primary" >Chat disabled</button></a>
+{%  endif  %}
 {% endblock %}

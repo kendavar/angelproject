@@ -13,16 +13,14 @@
   <div class="col-xs-12 col-md-10" background-color="#FFFFFF;">
     <div class="light">
       <div class="content">
-      <a href="/angelapp/updateSeeker" style="float: right;" class="btn btn-primary">Update</a>
         <p></p>
-        <h1 id="quotetitle" align="center">List of Seekers</h1>
+        <h1 id="quotetitle" align="center">List of Quotes</h1>
         <p></p>
-        
         <p></p>
-        {% for field in angeltable_list %}
+        {% for field in quotes_list %}
         <div class="list-group">
             <a href="{{ field.id }}" class="list-group-item list-group-item-action">
-              <p>{{ field.firstname}} {{field.lastName}}</p>
+              <p>{{ field.quote }}</p>
             </a>
         </div>
         {% endfor %}

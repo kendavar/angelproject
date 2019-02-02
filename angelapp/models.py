@@ -6,7 +6,7 @@ from django.core.validators import URLValidator
 
 class angeltable(models.Model):
     confirmPassword = models.TextField(max_length=100, null=True, blank=True)
-    created_Date = models.DateTimeField(null=True, blank=True)
+    created_Date = models.TextField(max_length=100, null=True, blank=True)
     description = models.TextField(max_length=10000, null=True, blank=True)
     deviceToken = models.TextField(max_length=1000, null=True, blank=True)
     email = models.EmailField(
@@ -19,6 +19,7 @@ class angeltable(models.Model):
     profilePic = models.TextField(models.TextField(
         validators=[URLValidator()]), null=True, blank=True)
     username = models.TextField(max_length=100, null=True, blank=True)
+    flag = models.BooleanField(default=False)
 
 
 class theripsttable(models.Model):
@@ -39,11 +40,13 @@ class theripsttable(models.Model):
 
 
 class question_set(models.Model):
-    expectation = models.TextField(max_length=500, null=True, blank=True)
+    questions = models.TextField(max_length=500, null=True, blank=True)
     firebase_id = models.TextField(max_length=500, null=True, blank=True)
-    interaction = models.TextField(max_length=100, null=True, blank=True)
-    isConsulted = models.TextField(max_length=100, null=True, blank=True)
-    issue = models.TextField(max_length=500, null=True, blank=True)
+    answers = models.TextField(max_length=100, null=True, blank=True)
+
+class quotes(models.Model):
+    firebase_id = models.TextField(max_length=500, null=True, blank=True)
+    quotes = models.TextField(max_length=500, null=True, blank=True)
 
 
 

@@ -27,7 +27,7 @@ SECRET_KEY = '!)22ecz^bojt(l@t9a1etg19e6kbk3b8i@kcs+bm8(&cuwsfu5'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.42.101']
+ALLOWED_HOSTS = ['192.168.42.101','127.0.0.1']
 
 
 # Application definition
@@ -56,7 +56,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'angelproject.urls'
 
-LOGIN_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = 'angelapp/'
 
 TEMPLATES = [
     {
@@ -86,17 +86,26 @@ WSGI_APPLICATION = 'angelproject.wsgi.application'
 #         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
 #     }
 # }
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'angelapp',
-        'USER': 'kendavar',
-        'PASSWORD': 'Kaneki3inori',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'angelproject',
+        'USER': 'root',
+        'PASSWORD': 'root',
         'HOST': 'localhost',
-        'PORT': '5432',
+        'PORT': '3306',
     }
 }
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'angelapp',
+#         'USER': 'kendavar',
+#         'PASSWORD': 'Kaneki3inori',
+#         'HOST': 'localhost',
+#         'PORT': '5432',
+#     }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/2.0/ref/settings/#auth-password-validators
