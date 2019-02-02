@@ -9,7 +9,8 @@ urlpatterns = [
     path(r'send/<str:reg_id>/<str:firebase_id>/', views.send_notifications, name='send'),
     path(r'createquote/',views.create_quote,name="create_quote"),
     path(r'quotes/', views.List_quotes.as_view(), name='quote'),
-    path(r'updateSeeker/',views.update_seekers,name="updateSeeker")
-
+    path(r'updateSeeker/',views.update_seekers,name="updateSeeker"),
+    path(r'terms/',views.terms.as_view(),name="terms")
+  
 ]
 

@@ -72,6 +72,9 @@ def send_notifications(request, reg_id,firebase_id):
         registration_id=reg_id, message_title=message_title, message_body=message_body)
     return HttpResponse(result)
 
+class terms(TemplateView):
+    template_name = 'termsandconditions.html'
+
 # def send_quotes(quote):
 #     path_to_fcm = "https://fcm.googleapis.com"
 #     server_key = 'AIzaSyA9l1_zDczB2Z1JkfmupsZ6gMljHhVKmnE'
