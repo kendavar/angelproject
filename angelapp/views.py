@@ -61,9 +61,10 @@ class detailView(DetailView):
     template_name = 'angelapp/seekers_details.html'
 
 def send_notifications(request, reg_id,firebase_id):
+    print(reg_id,firebase_id)
     db.child("FREE_USER").child(firebase_id).update({"flag": 1})
     path_to_fcm = "https://fcm.googleapis.com"
-    server_key = 'AIzaSyA9l1_zDczB2Z1JkfmupsZ6gMljHhVKmnE'
+    server_key = 'AAAAtn0jcc0:APA91bEI5Ur4NoRS4LroaxFCkQ_RUit5kXSerhmtG_iDdgq9u4EKhfnsP5aayuBiK86qdr7G76BHGk4Vjduf5CDQjm9vabyIh-yUzllYBNcltUfi4wWKz4xxguRkIe1N33uF-YXf9QDE'
     message_title = "Chat Enabled"
     message_body = "Hello Friend:), Now you can ask your queries with one of our executives!"
     print(reg_id)
