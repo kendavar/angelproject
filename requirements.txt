@@ -50,7 +50,7 @@ pyasn1-modules==0.2.2
 pycodestyle==2.4.0
 pycryptodome==3.4.3
 pyfcm==1.4.5
-Pygments==2.2.0
+Pygments==2.7.4
 pylint==2.1.1
 PyMySQL==0.8.0
 pyparsing==2.2.0
