@@ -7,7 +7,7 @@ chardet==3.0.4
 configparser==3.5.0
 cycler==0.10.0
 decorator==4.2.1
-Django==2.1.2
+Django==2.2.24
 django-crispy-forms==1.7.2
 django-widget-tweaks==1.4.3
 Faker==0.8.11
